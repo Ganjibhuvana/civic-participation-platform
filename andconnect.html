@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact and Connect</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .local-resources, .get-in-touch {
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            max-width: 600px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Contact and Connect</h2>
+
+    <div class="local-resources">
+        <h3>Local Resource Network</h3>
+        <ul>
+            <li><strong>Community Development Organization</strong><br>Email: info@cdo.org | Phone: (123) 456-7890</li>
+            <li><strong>City Council</strong><br>Email: council@city.gov | Phone: (987) 654-3210</li>
+            <li><strong>Neighborhood Watch</strong><br>Email: watch@neighborhood.org | Phone: (555) 555-5555</li>
+            <li><strong>Local Library</strong><br>Email: info@locallibrary.org | Phone: (444) 444-4444</li>
+            <li><strong>Volunteer Network</strong><br>Email: volunteer@network.org | Phone: (222) 222-2222</li>
+        </ul>
+    </div>
+
+    <div class="get-in-touch">
+        <h3>Get in Touch</h3>
+        <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea rows="4" id="message" placeholder="Your Message" required></textarea>
+            <button type="button" class="submit-button" onclick="submitContactForm()">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+    function submitContactForm() {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name && email && message) {
+            const encodedData = encodeURIComponent(
+                "Name: " + name + "\nEmail: " + email + "\nMessage: " + message
+            );
+            window.location.href = "res13.html?data=" + encodedData;
+        } else {
+            alert('Please fill out all fields.');
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVIC CONNECT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .hero {
+            height: 100vh;
+            background-color: #4CAF50; /* Green background */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #ff4a4a;
+        }
+
+        section {
+            padding: 50px;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div>
+            <h1>CIVIC CONNECT</h1>
+            <p>Paint Your Community’s Future Together</p><br><br>
+            <a href="second.html" class="cta-button">Join the Movement</a> <!-- Link to the new page -->
+        </div>
+    </div>
+    
+    <section id="get-involved">
+        <h2>Get Involved</h2>
+        <p>Explore initiatives and participate in your community.</p>
+        <!-- Additional content goes here -->
+    </section>
+
+    <script>
+        // Simple scroll effect to change background position for parallax effect
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            const hero = document.querySelector('.hero');
+            hero.style.backgroundPositionY = ${scrolled * 0.5}px;
+        });
+    </script>
+</body>
+</html>

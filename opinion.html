@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIVIC CONNECT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .initiatives-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .initiative-box {
+            border: 2px solid #4CAF50; /* Green border */
+            border-radius: 10px;
+            background-color: #f9f9f9; /* Light background */
+            padding: 20px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #4CAF50; /* Heading color */
+        }
+
+        .response-form {
+            margin-top: 10px;
+        }
+
+        .response-form input[type="text"],
+        .response-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .submit-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Explore Local Initiatives</h2>
+    
+    <div>
+        <label for="userName">Your Name:</label>
+        <input type="text" id="userName" placeholder="Enter your name" required><br><br>
+    </div>
+
+    <div class="initiatives-container">
+        <div class="initiative-box">
+            <h3>Community Garden</h3>
+            <p>Join us in cultivating a sustainable community garden to promote local food production.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion1"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Neighborhood Clean-Up</h3>
+            <p>Help us keep our community clean and beautiful by participating in monthly clean-up events.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion2"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Local Art Fair</h3>
+            <p>Celebrate local artists and their work at our annual fair, fostering creativity and community.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion3"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Food Drive</h3>
+            <p>Support local families in need by donating non-perishable food items during our food drives.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion4"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Health Workshops</h3>
+            <p>Participate in workshops focusing on health and wellness for our community members.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion5"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Environmental Awareness</h3>
+            <p>Join us in educating the community about sustainable practices and environmental care.</p>
+            <textarea rows="3" placeholder="Your Opinion..." id="opinion6"></textarea>
+        </div>
+
+        <div class="initiative-box">
+            <h3>Other Initiative</h3>
+            <p>If you have another idea or problem you'd like to address, please share it here.</p>
+            <textarea rows="3" placeholder="Describe the initiative..." id="otherInitiative"></textarea>
+            <textarea rows="3" placeholder="Your Opinion..." id="otherOpinion"></textarea>
+        </div>
+    </div>
+
+    <button class="submit-button" onclick="window.location.href='res11.html'">Submit All Responses</button>
+
+    <script>
+        function submitAllResponses() {
+            const userName = document.getElementById('userName').value;
+            const responses = [];
+
+            for (let i = 1; i <= 6; i++) {
+            
+                SyntaxError: missing ) after argument list
+
+                if (opinion) {
+                    responses.push(${userName} (Initiative ${i}): ${opinion});
+                }
+            }
+
+            // Handle Other Initiative
+            const otherInitiative = document.getElementById('otherInitiative').value;
+            const otherOpinion = document.getElementById('otherOpinion').value;
+            if (otherInitiative && otherOpinion) {
+                responses.push(${userName} (Other Initiative): ${otherInitiative} - ${otherOpinion});
+            }
+
+            if (responses.length > 0) {
+                const queryString = encodeURIComponent(JSON.stringify(responses));
+                window.location.href = responses.html?data=${queryString};
+            } else {
+                alert('Please provide at least one opinion before submitting.');
+            }
+        }
+    </script>
+</body>
+</html>
